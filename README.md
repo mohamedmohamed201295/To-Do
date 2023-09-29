@@ -23,10 +23,10 @@ This project is to create, delete, edit, and show all tasks or a single task. Re
     , NODE_ENV to 'development' mode, and PORT to 3000. To avoid port collisions,
      in the source code port value is 5000.
 
-    4- Install dependencies by typing -npm install in the terminal
-     and run the server locally with -npm start and this will run
+    4- Install dependencies by typing <kbd>npm install</kbd> in the terminal
+     and run the server locally with <kbd>npm start</kbd> and this will run
      the project in development mode and if you want to run it in production mode, you can
-     run -npm run start:prod.
+     run <kbd>npm run start:prod</kbd>.
 
 
 4. Now you can send requests by postman to check APIs
