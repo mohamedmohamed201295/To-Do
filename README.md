@@ -20,7 +20,7 @@ This project is to create, delete, edit, and show all tasks or a single task. Re
 
 3- Create a .env file and set the MONGO_URI variable equal to the DB connection string
 (don't forget to replace '<password>' and set your collection name between '/' and '?')
-, NODE_ENV to 'development' mode, and PORT to 3000. To avoid port collisions,
+, NODE_ENV to 'development' mode, and PORT variable. To avoid port collisions,
  in the source code port value is 5000.
 
 4- Install dependencies by typing <kbd>npm install</kbd> in the terminal
