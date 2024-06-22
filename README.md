@@ -4,11 +4,11 @@ This project is a RESTful API built with Node.js, Express.js, and MongoDB to man
 ## Table of Contents
 1. [Features](#1-features)
 2. [Installation](#2-installation)
-3. [UI and Public Folder](#3-ui-and-public-folder)
+3. [Usage](#3-usage)
 4. [Environment Variables](#4-environment-variables)
 5. [Error Handling](#5-error-handling)
 6. [License](#6-license)
-7. [Find a bug?](#7-find-a-bug?)
+7. [Find a bug?](#7-find-a-bug)
 
 ## 1. Features
 - **CRUD Operations:** Create, Read, Update, and Delete tasks.
@@ -77,7 +77,7 @@ The API will be available at `http://localhost:5000/api/v1/tasks`.
 ## 6. License
 This project is licensed under the [ISC License](https://opensource.org/license/isc-license-txt). See the LICENSE file for more details.
 
-## 7. Find a bug?
+## 7. Find a bug
 feel free to submit an issue (with or without a fix) or an improvement for this project. I would appreciate that.
 
 
