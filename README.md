@@ -1,48 +1,83 @@
-# ToDo website (server side)
-## Simple server app that provides CRUD APIs using MongoDB, Node.js, and Express web framework.
+# Task Management API
+This project is a RESTful API built with Node.js, Express.js, and MongoDB to manage tasks. It includes endpoints for creating, retrieving, updating, and deleting tasks, with validation for task data.
 
-This project is to create, delete, edit, and show all tasks or a single task. Returns JSON data.
+## Table of Contents
+1. [Features](#1-features)
+2. [Installation](#2-installation)
+3. [UI and Public Folder](#3-ui-and-public-folder)
+4. [Environment Variables](#4-environment-variables)
+5. [Error Handling](#5-error-handling)
+6. [License](#6-license)
+7. [Find a bug?](#7-find-a-bug?)
 
-## To Run This Project
+## 1. Features
+- **CRUD Operations:** Create, Read, Update, and Delete tasks.
+- **Validation:** Input validation using `express-validator`.
+- **Error Handling:** Centralized error handling for better code maintenance.
+- **Logging:** Request logging using `morgan`.
+- **Environment Variables:** Configuration using `.env` file.
+- **MongoDB Integration:** Database connection and schema management with `mongoose`.
+- **Modular Structure:** Separation of concerns using controllers, middleware, and routes.
 
-### 1. In order to run the project, you need:
-- A text editor like <a href="https://code.visualstudio.com/">VS code.</a>
-- <a href="https://nodejs.org/en">Node.js.</a>
-- <a href="https://www.mongodb.com/atlas/database">Atlas MongoDB</a> hosting account(free).
-- <a href="https://www.postman.com/">Postman</a> to send your requests
+## 2. Installation
+1. **Clone the repository**
+2. **Navigate to the Project Directory:**
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+4. **Set up environment variables:**
+   Create a `.env` file in the root directory and add the following:
+   ```plaintext
+   PORT=5000
+   NODE_ENV=development
+   MONGO_URI=<your-mongodb-uri>
+   ```
+   Replace `<your-mongodb-uri>` with your MongoDB connection string.
+5. Node.js version 12 or higher is recommended.
 
+## 3. Usage
+1. **Start the server:**
+- Development mode:
+  ```bash
+  npm start
+  ```
+  
+### UI and Public Folder
+This project includes a `public` folder that serves static assets for the frontend UI. You can place HTML, CSS, JavaScript, or other resources here to enhance the project with a frontend interface. The API itself does not serve these assets directly; you'll need a separate frontend application or tool (like a static file server) to interact with the API endpoints.
+- The API will be available at `http://localhost:5000/index.html`.
 
-### 2. Run the project locally:
+### API Endpoints
+Use tools like [Postman](https://www.postman.com/) or [curl](https://curl.se/) to test the following endpoints.
+The API will be available at `http://localhost:5000/api/v1/tasks`.
+- **GET `/api/v1/tasks`:**
+  - Fetches all tasks.
+- **POST `/api/v1/tasks`:**
+  - Creates a new task.
+  - Requires a JSON body with `name` field.
+- **GET `/api/v1/tasks/:id`:**
+  - Fetches a single task by ID.
+  - Requires a valid MongoDB ID in the URL parameter.
+- **PATCH `/api/v1/tasks/:id`:**
+  - Updates a task by ID.
+  - Requires a valid MongoDB ID in the URL parameter and a JSON body with `name` field.
+- **DELETE `/api/v1/tasks/:id`:**
+  - Deletes a task by ID.
+  - Requires a valid MongoDB ID in the URL parameter.
 
-1- fork the repo.
+## 4. Environment Variables
+- `PORT`: Port number for the server (default: `5000`).
+- `NODE_ENV`: Environment mode (`development` or `production`).
+- `MONGO_URI`: MongoDB connection URI.
 
-2- Clone your repo down to your local machine.
+## 5. Error Handling
+- Centralized error handling using middleware (`errorHandlerMiddleware`).
+- Validation errors for API requests are returned as JSON with a `400 Bad Request` status.
 
-3- Create a .env file and set the MONGO_URI variable equal to the DB connection string
-(don't forget to replace '<password>' and set your collection name between '/' and '?')
-, NODE_ENV to 'development' mode, and PORT variable. To avoid port collisions,
- in the source code port value is 5000.
+## 6. License
+This project is licensed under the [ISC License](https://opensource.org/license/isc-license-txt). See the LICENSE file for more details.
 
-4- Install dependencies by typing <kbd>npm install</kbd> in the terminal
- and run the server locally with <kbd>npm start</kbd> and this will run
- the project in development mode and if you want to run it in production mode, you can
- run <kbd>npm run start:prod</kbd>.
-
-
-### 3. Test APIs:
-Now you can send requests by postman to check APIs
-, validation layer (it is located in the routes/validation-layer folder)
-, middleware error handler (located in middleware)
-and schema validation (in the models folder).
-
-- To create a task: POST localhost:'the port number'/api/v1/tasks -set Body/Raw/JSON/set "name" -send
-- To get all tasks: GET localhost:'the port number'/api/v1/tasks -send
-- To get a task: GET localhost:'the port number'/api/v1/tasks/'task id' -send
-- To edit a task: PUT localhost:'the port number'/api/v1/tasks/'task id' -set Body/Raw/JSON/set "name" 
-  and "completed"(this is an optional field) -send
-- To delete a task: DELETE localhost:'the port number'/api/v1/tasks/'task id' -send
-
-## Find a bug?
+## 7. Find a bug?
 feel free to submit an issue (with or without a fix) or an improvement for this project. I would appreciate that.
 
 
