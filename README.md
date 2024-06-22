@@ -75,7 +75,7 @@ The API will be available at `http://localhost:5000/api/v1/tasks`.
 - Validation errors for API requests are returned as JSON with a `400 Bad Request` status.
 
 ## 6. License
-This project is licensed under the [MIT License]([https://opensource.org/license/isc-license-txt](https://opensource.org/license/MIT)). See the LICENSE file for more details.
+This project is licensed under the [MIT License](https://opensource.org/license/MIT). See the LICENSE file for more details.
 
 ## 7. Find a bug
 feel free to submit an issue (with or without a fix) or an improvement for this project. I would appreciate that.
